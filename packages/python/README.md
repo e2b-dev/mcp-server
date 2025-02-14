@@ -2,6 +2,8 @@
 
 A Model Context Protocol server for running code in a secure sandbox by [E2B](https://e2b.dev).
 
+<a href="https://glama.ai/mcp/servers/o9swvhmy2i"><img width="380" height="200" src="https://glama.ai/mcp/servers/o9swvhmy2i/badge" alt="e2b-mcp-server MCP server" /></a>
+
 ## Development
 
 Install dependencies:
