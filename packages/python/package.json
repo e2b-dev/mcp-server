@@ -1,6 +1,7 @@
 {
   "name": "@e2b/python-mcp-server",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "postVersion": "poetry version $(pnpm pkg get version --workspaces=false | tr -d \\\")",
     "postPublish": "poetry build && poetry config pypi-token.pypi ${PYPI_TOKEN} && poetry publish --skip-existing"
