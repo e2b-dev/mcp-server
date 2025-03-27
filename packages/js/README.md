@@ -4,6 +4,11 @@ A Model Context Protocol server for running code in a secure sandbox by [E2B](ht
 
 ## Development
 
+Navigate to the JavaScript package directory:
+```bash
+cd mcp-server/packages/js
+```
+
 Install dependencies:
 ```
 npm install
@@ -37,6 +42,15 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   }
 }
 ```
+
+Note: Make sure you have an E2B API key set up. You can get one from [e2b.dev](https://e2b.dev).
+
+### Troubleshooting
+
+If you encounter dependency issues:
+- Ensure you've run `npm install` in the correct directory (`mcp-server/packages/js`)
+- Check that all dependencies like `@e2b/code-interpreter` are properly installed
+- If building from source, make sure to run `npm run build` before attempting to use the server
 
 ### Debugging
 
