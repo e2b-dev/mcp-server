@@ -3,8 +3,6 @@ name: Publish MCP Packages
 on:
   workflow_call:
     secrets:
-      E2B_API_KEY:
-        required: true
       NPM_TOKEN:
         required: true
       PYPI_TOKEN:
@@ -15,7 +13,7 @@ permissions:
 
 jobs:
   test:
-    name: Publish Desktop SDK
+    name: Publish MCP Server
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/create-github-app-token@v1
