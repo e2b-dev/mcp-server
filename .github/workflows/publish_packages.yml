@@ -14,7 +14,7 @@ permissions:
 jobs:
   test:
     name: Publish MCP Server
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
@@ -62,13 +62,6 @@ jobs:
         run: pnpm run version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate SDK reference
-        id: sdk-ref
-        run: pnpm run --recursive generate-ref
-
-      - name: Show docs file structure
-        run: tree ./sdk-reference
 
       - name: Release new versions
         uses: changesets/action@v1

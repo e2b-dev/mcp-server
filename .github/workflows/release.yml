@@ -13,7 +13,7 @@ permissions:
 jobs:
   is_release:
     name: Is release?
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       release: ${{ steps.version.outputs.release }}
     steps:
@@ -52,7 +52,7 @@ jobs:
     name: Repository changes
     needs: [is_release]
     if: needs.is_release.outputs.release == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       js-sdk: ${{ steps.js.outputs.release }}
       python-sdk: ${{ steps.python.outputs.release }}
@@ -105,7 +105,7 @@ jobs:
     needs: [publish]
     if: failure()
     name: Release Failed - Slack Notification
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Release Failed - Slack Notification
         uses: rtCamp/action-slack-notify@v2
