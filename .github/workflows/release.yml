@@ -1,13 +1,9 @@
 name: Release MCP Packages
 
-#on:
-#  push:
-#    branches:
-#      - main
-
 on:
   push:
-  pull_request:
+    branches:
+      - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
