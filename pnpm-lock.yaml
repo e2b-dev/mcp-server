@@ -43,6 +43,8 @@ importers:
         specifier: ^5.3.3
         version: 5.7.2
 
+  packages/python: {}
+
 packages:
 
   '@babel/runtime@7.26.0':
