@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "e2b-mcp-server"
 version = "0.1.0"
+description = "E2B MCP Server"
 authors = ["e2b <hello@e2b.dev>"]
 license = "Apache-2.0"
 readme = "README.md"
