@@ -22,4 +22,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/e2b-dev/e2b-dev/issues"
+"Bug Tracker" = "https://github.com/e2b-dev/mcp-server/issues"
