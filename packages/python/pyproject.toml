@@ -7,7 +7,7 @@ license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://e2b.dev/"
 repository = "https://github.com/e2b-dev/mcp-server/tree/main/packages/python"
-packages = [{ include = "e2b-mcp-server" }]
+packages = [{ include = "e2b_mcp_server" }]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
@@ -22,4 +22,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/e2b-dev/e2b-dev/issues"
+"Bug Tracker" = "https://github.com/e2b-dev/mcp-server/issues"
