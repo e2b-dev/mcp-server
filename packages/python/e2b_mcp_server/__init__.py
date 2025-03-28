@@ -1,4 +1,4 @@
-from packages.python.src.e2b_mcp_server import server
+from . import server
 import asyncio
 
 def main():
