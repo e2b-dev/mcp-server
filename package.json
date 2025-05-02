@@ -10,5 +10,8 @@
     "@changesets/cli": "^2.27.12",
     "@changesets/read": "^0.6.2",
     "changeset": "^0.2.6"
+  },
+  "dependencies": {
+    "mcp-evals": "^1.0.18"
   }
 }
