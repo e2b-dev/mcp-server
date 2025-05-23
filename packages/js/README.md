@@ -6,17 +6,17 @@ A Model Context Protocol server for running code in a secure sandbox by [E2B](ht
 
 Install dependencies:
 ```
-npm install
+pnpm install
 ```
 
 Build the server:
 ```
-npm run build
+pnpm build
 ```
 
 For development with auto-rebuild:
 ```
-npm run watch
+pnpm watch
 ```
 
 ## Installation
@@ -43,7 +43,7 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 Since MCP servers communicate over stdio, debugging can be challenging. We recommend using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector), which is available as a package script:
 
 ```
-npm run inspector
+pnpm inspector
 ```
 
 The Inspector will provide a URL to access debugging tools in your browser.
