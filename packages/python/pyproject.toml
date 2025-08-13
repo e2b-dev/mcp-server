@@ -9,11 +9,15 @@ homepage = "https://e2b.dev/"
 repository = "https://github.com/e2b-dev/mcp-server/tree/main/packages/python"
 packages = [{ include = "e2b_mcp_server" }]
 
+[tool.poetry.scripts]
+e2b-mcp-server = "e2b_mcp_server:main"
+e2b-mcp-server-http = "e2b_mcp_server.http_server:main"
+
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 
 e2b-code-interpreter = "^1.0.2"
-mcp = "^1.0.0"
+mcp = ">=1.12.0"
 pydantic = "^2.10.2"
 python-dotenv = "1.0.1"
 
