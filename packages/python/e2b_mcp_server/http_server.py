@@ -59,10 +59,29 @@ mcp = FastMCP(
     ),
 )
 
+def tool_response(exec_obj):
+    """Convert Execution object to a serializable dict"""
+    result = {}
 
-# FastMCP automatically exposes tools/list based on registered @mcp.tool() functions
-# No need for custom list_tools function - authentication is handled by token_verifier
+    # Logs
+    if hasattr(exec_obj, "logs"):
+        result["stdout"] = exec_obj.logs.stdout if hasattr(exec_obj.logs, "stdout") else []
+        result["stderr"] = exec_obj.logs.stderr if hasattr(exec_obj.logs, "stderr") else []
 
+    # Results (if any)
+    if hasattr(exec_obj, "results"):
+        result["results"] = exec_obj.results
+
+    # Error
+    if hasattr(exec_obj, "error") and exec_obj.error:
+        err = exec_obj.error
+        result["error"] = {
+            "name": getattr(err, "name", None),
+            "value": getattr(err, "value", None),
+            "traceback": getattr(err, "traceback", None)
+        }
+
+    return result
 
 @mcp.tool()
 async def run_code(code: str) -> Sequence[TextContent | ImageContent | EmbeddedResource]:
@@ -75,10 +94,7 @@ async def run_code(code: str) -> Sequence[TextContent | ImageContent | EmbeddedR
     sandbox = Sandbox(api_key=api_key)
     execution = sandbox.run_code(code)
     
-    result = {
-        "stdout": execution.logs.stdout,
-        "stderr": execution.logs.stderr,
-    }
+    result = tool_response(execution)
     
     return [
         TextContent(
