@@ -3,12 +3,11 @@ name: Publish MCP Packages
 on:
   workflow_call:
     secrets:
-      NPM_TOKEN:
-        required: true
       PYPI_TOKEN:
         required: true
 
 permissions:
+  id-token: write
   contents: write
 
 jobs:
@@ -44,11 +43,12 @@ jobs:
         with:
           version: 9.5
 
-      - name: Setup Node.js 18
+      - name: Setup Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '20.x'
           cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Configure pnpm
         run: |
@@ -70,7 +70,6 @@ jobs:
           createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
       - name: Update lock file
