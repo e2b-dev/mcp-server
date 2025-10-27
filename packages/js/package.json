@@ -2,6 +2,11 @@
   "name": "@e2b/mcp-server",
   "version": "0.2.0",
   "description": "A Model Context Protocol server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e2b-dev/mcp-server"
+    "directory": "packages/js"
+  },
   "type": "module",
   "bin": {
     "@e2b/mcp-server": "./build/index.js"
