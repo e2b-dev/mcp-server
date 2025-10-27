@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   test:
-    name: Publish MCP Server
+    name: Test
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repo
