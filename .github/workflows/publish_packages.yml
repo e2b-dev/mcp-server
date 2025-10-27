@@ -50,10 +50,10 @@ jobs:
           cache: pnpm
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Configure pnpm
+      - name: Update npm
         run: |
-          pnpm config set auto-install-peers true
-          pnpm config set exclude-links-from-lockfile true
+          npm install -g npm@^11.6
+          npm --version
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
