@@ -3,12 +3,11 @@ name: Publish MCP Packages
 on:
   workflow_call:
     secrets:
-      NPM_TOKEN:
-        required: true
       PYPI_TOKEN:
         required: true
 
 permissions:
+  id-token: write
   contents: write
 
 jobs:
@@ -70,7 +69,6 @@ jobs:
           createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
       - name: Update lock file
