@@ -2,12 +2,12 @@
   "name": "e2b-mcp-root",
   "private": true,
   "scripts": {
-    "version": "changeset version && pnpm run -r postVersion",
-    "publish": "changeset publish && pnpm run -r postPublish"
+    "version": "pnpm changeset version && pnpm run -r postVersion",
+    "publish": "pnpm changeset publish && pnpm run -r postPublish",
+    "changeset": "pnpx @changesets/cli"
   },
   "packageManager": "pnpm@9.15.5",
   "devDependencies": {
-    "@changesets/cli": "^2.27.12",
     "@changesets/read": "^0.6.2",
     "changeset": "^0.2.6"
   }
