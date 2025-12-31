@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@e2b/code-interpreter": "^1.0.4",
-    "@modelcontextprotocol/sdk": "0.6.0",
+    "@modelcontextprotocol/sdk": "1.24.0",
     "dotenv": "^16.4.5",
     "zod": "^3.23.8",
     "zod-to-json-schema": "^3.23.5"
