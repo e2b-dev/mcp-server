@@ -1,6 +1,8 @@
 ![E2B MCP Server Preview Light](/readme-assets/mcp-server-light.png#gh-light-mode-only)
 ![E2B MCP Server Preview Dark](/readme-assets/mcp-server-dark.png#gh-dark-mode-only)
 
+> **Deprecated:** This project is no longer actively maintained. It may not receive further updates or bug fixes.
+
 # E2B MCP Server
 
 [![smithery badge](https://smithery.ai/badge/e2b)](https://smithery.ai/server/e2b)
